@@ -24,25 +24,25 @@ be running python 3.7. If you want ver 3.5, run ```$ python3.5```.
 To build the image
 
 ```
-$ make docker-build
+$ make build
 ```
 
 To push the built image
 
 ```
-$ make docker-push
+$ make push
 ```
 
 To login to docker hub
 
 ```
-$ make docker-login
+$ make login
 ```
 
 To run the image
 
 ```
-$ make docker-run
+$ make run
 ```
 
 ## Contributing
@@ -53,7 +53,7 @@ conduct, and the process for submitting pull requests to us.
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available,
-see the [tags on this repository](https://github.com/mrxcitement/docker-exercism-base/tags). 
+see the [tags on this repository](https://github.com/mrxcitement/exercism-base/tags). 
 
 ## Authors
 
