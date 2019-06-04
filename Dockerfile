@@ -2,7 +2,7 @@ FROM debian:9
 
 LABEL maintainer="mike@thebarkers.com" \
       description="An exercism 'python' track image." \
-      version="0.1.1"
+      version="0.1.2"
 
 # Update Debian and Install dev tools
 RUN apt-get update \
@@ -20,7 +20,7 @@ RUN cd /tmp \
     && tar xzf exercism-linux-64bit.tgz \
     && mv exercism /usr/local/bin/
 
-# Install pyenv prerequisites 
+# Install pyenv prerequisites
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
@@ -46,7 +46,7 @@ RUN curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/p
 # Configure pyenv
 RUN echo 'export PATH="/root/.pyenv/bin:$PATH"' >> /root/.profile \
     && echo 'eval "$(pyenv init -)"' >> /root/.profile \
-    && echo 'eval "$(pyenv virtualenv-init -)"' >> /root.profile
+    && echo 'eval "$(pyenv virtualenv-init -)"' >> /root/.profile
 
 # Install pyenv python versions
 SHELL ["/bin/bash", "-c"]
