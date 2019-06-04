@@ -1,16 +1,16 @@
 username ?= mrbarker
 imagename ?= exercism-python
-tag ?= 0.1.1
+tag ?= 0.1.2
 
 .PHONY: clean login run
 all: build
 
 build: Dockerfile
-	docker build -t $(username)/$(imagename):$(tag) .	
+	docker build -t $(username)/$(imagename):$(tag) -t $(username)/$(imagename) .
 	touch $@
 
 push: build
-	docker push $(username)/$(imagename):$(tag)
+	docker push $(username)/$(imagename)
 	touch $@
 
 login:
